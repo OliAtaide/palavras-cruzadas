@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercício - Palavras Cruzadas</title>
+  <link href="crossword.css" rel="stylesheet" type="text/css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="container">
+      <span>
+        <strong>Módulo:</strong>
+        Linha de cuidado para a atenção a crianças e adolescentes em situação de violência sexual
+      </span>
+      <span>
+        <strong>
+          Conteudista:
+        </strong>
+        Maria de Lourdes Magalhães
+      </span>
+      <span>
+        <strong>
+          Unidade 1:
+        </strong>
+        Violência sexual contra crianças e adolescentes: no Brasil e no mundo
+      </span>
+      <span>
+        <strong>
+          Recurso:
+        </strong>
+        Game 1 - Palavras cruzadas
+      </span>
+    </div>
+  </div>
+  <div class="container">
+    <header>
+
+      <h1>Linha de cuidado para a atenção a crianças e adolescentes em situação de violência sexual</h1>
+
+      <p>Você é bom/boa em palavras cruzadas?</p>
+      <p>
+        Clique nos números para visualizar a pergunta e em seguida digite a
+        resposta para completar a palavra cruzada. Não use acentos nas palavras
+        se forem acentuadas, nem coloque espaço entre elas.
+      </p>
+    </header>
+    <div id="divTest"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <script src="crossword.js"></script>
+    <script>
+      $(function () {
+        var grid = [
+          "@@@@ @@ @@@@@@@@@@@@",
+          "@@   @@ @@@@@@@@    ",
+          "@@@@ @@ @@@@@@@@ @@@",
+          "@@@@ @@ @@@@@@@@ @@@",
+          "@@@@@@@ @@@@@@@@ @@@",
+          "@@@ @@@ @@       @@@",
+          "@@@ @@@ @@@ @@@@ @@@",
+          "@@@ @@@ @@@ @@@@ @@@",
+          "@@@ @@   @@ @@@@ @@@",
+          "@@@ @@@ @@@ @@@@ @@@",
+          "@@@ @@@ @@@ @@@@@@@@",
+          "@@@ @@@@@@@@@@@@@@@@",
+          "@@@ @@@@@@@@@@@@@@@@",
+          "@    @@@@@@@@@@@@@@@",
+          "@@@ @@@@@@@@@@@@@@@@"
+        ];
+        var acrossClues = [
+          "Principal local onde a violência sexual acontece.%%LAR",
+          "Quantos objetivos contemplaram meta(s) sobre a violência nos Objetivos do Desenvolvimento Sustentável (ODS)?%%DOIS",
+          "Quem são as principais vítimas violência sexual?%%MENINAS",
+          "Qual a sigla da Convenção sobre os Direitos da Criança?%%CDC",
+          "Até que ano o Brasil e outros países devem cumprir as metas da ODS?%%2030"
+        ];
+
+        var downClues = [
+          "Quantas metas foram contempladas para a temática da violência na Agenda 2030?%%TRES",
+          "Qual a definição utilizada para qualificar pessoas/homens que praticam a violência contra crianças, adolescentes e mulheres?%%PERPETRADOR",
+          "Quantos são os objetivos dos ODS?%%DEZESSETE",
+          "Qual nome do documento que apresenta os ODS?%%AGENDA2030",
+          "Qual o segundo local onde a violência sexual acontece?%%ESCOLA"
+        ];
+
+        $("#divTest").crossword({
+          gridMask: grid,
+          acrossClues: acrossClues,
+          downClues: downClues,
+          cluesToRight: true,
+          validateAnswer: "clue"
+        });
+      });
+    </script>
+  </div>
+  <div class="respostas">
+    <button id="verRespostas">Está com dificuldade? Ver respostas</button>
+    <div class="respostas-each">
+      <button type="button" class="open" id="modal1">1</button>
+      <button type="button" class="open" id="modal2">2</button>
+      <button type="button" class="open" id="modal3">3</button>
+      <button type="button" class="open" id="modal41">4 horizontal</button>
+      <button type="button" class="open" id="modal42">4 vertical</button>
+      <button type="button" class="open" id="modal5">5</button>
+      <button type="button" class="open" id="modal6">6</button>
+      <button type="button" class="open" id="modal7">7</button>
+      <button type="button" class="open" id="modal8">8</button>
+      <button type="button" class="open" id="modal9">9</button>
+    </div>
+  </div>
+  <div class="modal" tabindex="-1" role="dialog" id="myModalcdc">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">CDC</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>CDC é a sigla da Convenção sobre os Diretos da Criança, amplamente reconhecida pelos países signatários.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModalLar">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Lar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>LAR (sinônimo de residência) é o principal local de ocorrência a violência sexual contra as crianças,
+            segundo os dados registrados, no período de 2011 a 2017,
+            no Sistema Nacional de Agravos de Notificação (SINAN), do Ministério da Saúde (MS) </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModalMeninas">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Meninas</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>MENINAS são as principais vítimas de violência sexual, embora nos últimos anos a notificação de violência
+            contra os meninos venha aumentando. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModalDois">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Dois</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>DOIS são os Objetivos do Desenvolvimento Sustentável (ODS).
+            <br /><br /><b>Objetivo 5:</b> Igualdade de gênero: alcançar a igualdade de gênero e empoderar todas as
+            mulheres e menina.
+            <br /><br /><b>Objetivo 16:</b> Paz, justiça e instituições eficazes: promover sociedades pacíficas e
+            inclusivas para o desenvolvimento sustentável, proporcionar o acesso à justiça para todos e construir
+            instituições eficazes, responsáveis e inclusivas em todos os níveis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModal2030">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">2030</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>As metas do ODS, precisam ser atingidas/cumpridas pelo Brasil e outros países que são signatários da AGENDA
+            2030, até o ano de 2030. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModalTres">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Três</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>TRÊS foram as metas definidas na Agenda 2030 dos ODS.
+            <br /><br /><b>Meta 5.2:</b> Até 2030, eliminar todas as formas de violência contra todas as mulheres e
+            meninas nas esferas públicas e privadas, incluindo o tráfico e exploração sexual e de outros tipos;
+            <br /><br /><b>Meta 16.1:</b> Até 2030, reduzir significativamente todas as formas de violência e as taxas
+            de mortalidade relacionada, em todos os lugares; e
+            <br /><br /><b>Meta: 16.2:</b> Até 2030, acabar com abuso, exploração, tráfico e todas as formas de
+            violência e tortura contra crianças.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModalperpetrador">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Perpetrador</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>PERPETRADOR é a definição mais utilizada para qualificar pessoa (homem) que pratica violência contra
+            crianças, adolescentes, mulheres e pessoas idosas. Também são utilizadas outras definições, tais como
+            agressor, ofensor entre outras.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModalEscola">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Escola</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>ESCOLA foi o segundo local de maior ocorrência de casos notificadas de violência sexual contra crianças, no
+            período de 2011 a 2017, segundo dados do SINAN/MS. No caso de adolescentes é a residência (lar), foi o local
+            de maior ocorrência e a via pública o segundo local.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModalDezessete">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Dezessete</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>DEZESSETE objetivos foram consagrados na AGENDA 2030 (http://www.agenda2030.com.br/). </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="myModalAGENDA2030">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">AGENDA 2030</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>AGENDA2030 foi lançada em 2015, durante a Cúpula de Desenvolvimento Sustentável na Assembleia Geral da
+            Organização das Nações Unidas (ONU), pactuada com os 193 países membros da organização. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="d-flex justify-content-center">
+    <img src="logos.svg" alt="" class="img-fluid">
+  </footer>
+</body>
+
+</html>
