@@ -12,17 +12,13 @@ header {
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-}
-
-.navbar, footer{
-  background-color: #0D4068;;
+  margin-top: 1em;
 }
 
 h1 {
-  color: white;
+  color: #0D4068;
   font-size: 30px;
   font-weight: 700 !important;
-  margin-top: 60px !important;
   text-transform: uppercase;
 }
 
@@ -33,8 +29,8 @@ p {
   font-weight: 400;
 }
 
-#divTest {
-  margin-bottom: 80px;
+#divTest, .respostas {
+  margin-bottom: 1em;
 }
 
 .txt-center {
@@ -134,11 +130,6 @@ p {
     cursor: pointer;
 }
 
-.cwd-tile-inactive {
-
-}
-
-
 .aux {
   margin-top: 30px;
   margin-right: 20px;
@@ -149,10 +140,6 @@ p {
   margin-top: 30px;
 }
 
-.respostas {
-  /* max-width: 80%; */
-  /* margin: 1em auto; */
-}
 .respostas button {
   border: 1px solid #404040;
   padding: .5em;
@@ -182,12 +169,12 @@ button:focus {
 .navbar {
   background-color: #0D4068;
   color: white;
+  background-color: #0D4068;
 }
 
 footer img {
   width: 50%;
 }
-
 
 @media screen and (max-width: 600px) {
   footer img{
