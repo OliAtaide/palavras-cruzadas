@@ -60,7 +60,7 @@ p {
 #cwd-grid td.cwd-tile-cursor
 {
     border-color: black !important;
-    background-color: #EA9F44!important;
+    background-color: #ea9f44 !important;
     color: black;
 }
 
@@ -108,7 +108,7 @@ p {
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 13px;
-    color:#0D4068;
+    color:#B16201;
 }
 
 .cwd-clues-header:not(:first-child){
@@ -158,14 +158,14 @@ button:focus {
   outline: none !important;
 }
 .respostas .respostas-each .open {
-  background-color: #EA9F44;
+  background-color: #B16201;
   color: #fff;
   border: 1px solid #fff;
   font-size: 0.765em;
 }
 
-.navbar {
-  background-color: #EA9F44;
+.navbar, footer {
+  background-color: #ea9f44;
   color: white;
 }
 
