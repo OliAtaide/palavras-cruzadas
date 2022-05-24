@@ -12,11 +12,10 @@ header {
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-  margin-top: 1em;
 }
 
 h1 {
-  color: #0D4068;
+  color: #B16201;
   font-size: 30px;
   font-weight: 700 !important;
   text-transform: uppercase;
@@ -45,7 +44,6 @@ p {
 
 
 #cwd-container {
-  color: #606060;
   font-weight: 400;
   margin: auto;
 }
@@ -56,13 +54,13 @@ p {
 
 #cwd-grid td.cwd-tile-highlight
 {
-    background-color: #6187A2 !important;
+    background-color: #B16201 !important;
 }
 
 #cwd-grid td.cwd-tile-cursor
 {
     border-color: black !important;
-    background-color: #0D3F68!important;
+    background-color: #ea9f44 !important;
     color: black;
 }
 
@@ -110,7 +108,7 @@ p {
     font-weight: bold;
     padding-top: 5px;
     padding-bottom: 13px;
-    color:#0D4068;
+    color:#B16201;
 }
 
 .cwd-clues-header:not(:first-child){
@@ -160,16 +158,15 @@ button:focus {
   outline: none !important;
 }
 .respostas .respostas-each .open {
-  background-color: #0D4068;
+  background-color: #B16201;
   color: #fff;
   border: 1px solid #fff;
   font-size: 0.765em;
 }
 
-.navbar {
-  background-color: #0D4068;
+.navbar, footer {
+  background-color: #ea9f44;
   color: white;
-  background-color: #0D4068;
 }
 
 footer img {
