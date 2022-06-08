@@ -683,8 +683,6 @@
         );
         $("#cwd-clue-box-text").fadeOut("fast");
 
-        clueId = clueId ? clueId : -1;
-
         if (clueId >= 0) {
           var clueIds = impl.highlightTiles(clueId);
 
